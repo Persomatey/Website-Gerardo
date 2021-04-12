@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hunter Goodin - Game Developer</title>
+		<link rel="stylesheet" type="text/css" href="devstyle.css">
+	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style> 
+	</style>
+	<body>
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="column">
+				<h1>Hunter Goodin</h1>
+				<h2>Game Developer</h2>
+			</div>
+
+			<div class="column">
+				<h3>
+					<A href="dev.html"><D>About</D></A>
+					<A href="dev-portfolio.html"><D>Portfolio</D></A>
+					<A href="dev-contact.html"><C>Contact</C></A>
+					<!-- <A href="dev-other.html"><D>Other</D></A> -->
+				</h3>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<hr/>
+
+		<!-- Contact Unique -->
+
+		<!-- Email form -->
+		<div style="text-align: left; padding-top: 1%; font-size: 20px">
+			<h5 style="font-size: 45px;">Contact Me</h5>
+
+			<div style="text-align: center;">
+				If you would like to infer about work or get a resume, feel free to shoot me an email.
+			</div>
+
+			</br>
+			</br>
+
+			<div id="contact-form" class="container">
+				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfy_LuRKLzcoqqFz-wdRe-F2Ba-DAMEGFH5h67KX4A78xbvpQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+					First & Last name:
+					<br>
+					<input type="text" name="entry.246933771" id="entry.246933771">
+					<br>
+					Email:
+					<br>
+					<input type="text" name="entry.1580348872" id="entry.1580348872">
+					<br>
+					Message:
+					<br>
+					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
+					<br>
+					<input type="submit" value="Send">
+					<text id="feedback"></text>
+				</form>
+
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+			function AfterSend()
+			{
+				var error = ""; 
+				var name = " 'Name' ";
+				var email = " 'Email' "; 
+				var message = " 'Message' "; 
+				var count = 0; 
+
+				if(document.forms["gform"]["entry.246933771"].value == "")
+				{
+					error = error + name; 
+					count++; 
+				}
+
+				if(document.forms["gform"]["entry.1580348872"].value == "")
+				{
+					error = error + email; 
+					count++;
+				}
+
+				if(document.forms["gform"]["entry.1579448101"].value == "")
+				{
+					error = error + message; 
+					count++;
+				}
+
+				if(count == 0)
+				{
+					document.getElementById("gform").reset();
+					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>Message Sent!</b></font>";
+				}
+				else if(count == 1)
+				{
+					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " is a required field </b></font>";
+				}
+				else if(count > 1)
+				{
+					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " are required fields </b></font>";
+				}
+			}
+			
+		</script>
+
+	</body>
+</html>
