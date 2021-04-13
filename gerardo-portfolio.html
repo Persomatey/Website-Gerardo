@@ -1,415 +1,70 @@
-<!-- Look into es6 object destructuring for importing specific javascript functions instead of a whole library -->
-
 <!doctype html>
 <html>
 	<head>
-		<title>Hunter Goodin - Game Developer</title>
-		<link rel="stylesheet" type="text/css" href="devstyle.css">
-		<script>
-			// R3 Functions
-			function ChangeImageR3L()
-			{
-				var imgR3 = document.getElementById("imageR3");
-				imgR3.src="images/devphotos/R3Logo.png";
-
-				document.getElementById("ButR31").className = "buttonR3YeSel";
-
-				document.getElementById("ButR32").className = "buttonR3UnSel";
-
-				document.getElementById("ButR33").className = "buttonR3UnSel";
-
-				return false;
-			}
-			function ChangeImageR3I1()
-			{
-				var imgR3 = document.getElementById("imageR3");
-				imgR3.src="images/devphotos/R3Gameplay1.png";
-
-				document.getElementById("ButR31").className = "buttonR3UnSel";
-
-				document.getElementById("ButR32").className = "buttonR3YeSel";
-
-				document.getElementById("ButR33").className = "buttonR3UnSel";
-				
-				return false;
-			}
-			function ChangeImageR3I2()
-			{
-				var imgR3 = document.getElementById("imageR3");
-				imgR3.src="images/devphotos/R3Gameplay2.png";
-
-				document.getElementById("ButR31").className = "buttonR3UnSel";
-
-				document.getElementById("ButR32").className = "buttonR3UnSel";
-
-				document.getElementById("ButR33").className = "buttonR3YeSel";
-
-				return false;
-			}
-
-			// LoF Functions
-			function ChangeImageLoFL()
-			{
-				var imgLoF = document.getElementById("imageLoF");
-				imgLoF.src="images/devphotos/LoFLogo.png"; 
-
-				document.getElementById("ButLoF1").className = "buttonLoFYeSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
-
-				return false;
-			}
-			function ChangeImageLoFI1()
-			{
-				var imgLoF = document.getElementById("imageLoF");
-				imgLoF.src="images/devphotos/LoFGameplay1.png";
-
-				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFYeSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
-				
-				return false;
-			}
-			function ChangeImageLoFI2()
-			{
-				var imgLoF = document.getElementById("imageLoF");
-				imgLoF.src="images/devphotos/LoFGameplay2.png";
-
-				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFYeSel";
-
-				return false;
-			}
-
-			// SS Functions
-			function ChangeImageSSL()
-			{
-				var imgLoF = document.getElementById("imageSS");
-				imgLoF.src="images/devphotos/SS9000Logo.png"; 
-
-				document.getElementById("ButSS1").className = "buttonSSYeSel";
-
-				document.getElementById("ButSS2").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS3").className = "buttonSSUnSel";
-
-				return false;
-			}
-			function ChangeImageSSI1()
-			{
-				var imgLoF = document.getElementById("imageSS");
-				imgLoF.src="images/devphotos/SS9000Gameplay1.png";
-
-				document.getElementById("ButSS1").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS2").className = "buttonSSYeSel";
-
-				document.getElementById("ButSS3").className = "buttonSSUnSel";
-				
-				return false;
-			}
-			function ChangeImageSSI2()
-			{
-				var imgLoF = document.getElementById("imageSS");
-				imgLoF.src="images/devphotos/SS9000Gameplay2.png";
-
-				document.getElementById("ButSS1").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS2").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS3").className = "buttonSSYeSel";
-
-				return false;
-			}
-
-			// Fa Functions
-			function ChangeImageFaL()
-			{
-				var imgLoF = document.getElementById("imageFa");
-				imgLoF.src="images/devphotos/FactoryLogo.png"; 
-
-				document.getElementById("ButFa1").className = "buttonFaYeSel";
-
-				document.getElementById("ButFa2").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa3").className = "buttonFaUnSel";
-
-				return false;
-			}
-			function ChangeImageFaI1()
-			{
-				var imgLoF = document.getElementById("imageFa");
-				imgLoF.src="images/devphotos/FactoryGameplay1.png";
-
-				document.getElementById("ButFa1").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa2").className = "buttonFaYeSel";
-
-				document.getElementById("ButFa3").className = "buttonFaUnSel";
-				
-				return false;
-			}
-			function ChangeImageFaI2()
-			{
-				var imgLoF = document.getElementById("imageFa");
-				imgLoF.src="images/devphotos/FactoryGameplay2.png";
-
-				document.getElementById("ButFa1").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa2").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa3").className = "buttonFaYeSel";
-
-				return false;
-			}
-		</script>
+		<title>Gerardo Bonnet - Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="gerardostyle.css">
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style> 
+		<body style="background-color:grey;">
 	</style>
 	<body>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
-			<div class="column">
-				<h1>Hunter Goodin</h1>
-				<h2>Game Developer</h2>
+			<div class="columnheader">
+				<h1>Gerardo Bonnet</h1>
+				<h2>Art & Animation</h2>
 			</div>
 
-			<div class="column">
+			<div class="columnheader">
 				<h3>
-					<A href="dev.html"><D>About</D></A>
-					<A href="dev-portfolio.html"><C>Portfolio</C></A>
-					<A href="dev-contact.html"><D>Contact</D></A>
-					<!-- <A href="dev-other.html"><D>Other</D></A> -->
+					<A href="gerardo-portfolio.html"><C>Portfolio</C></A>
+					<A href="gerardo.html"><D>About</D></A>
 				</h3>
 			</div>
 
-			<div class="columnside">
-				<p></p>
-			</div>
+		  	<div class="columnside">
+		  		<p></p>
+		  	</div>
 		</div>
 
 		<hr/>
 
 		<!-- Portfolio Unique -->
 
-		<!-- Rewound Running Remix -->
+		<div class="row" style="padding-top: 50px">
 
-		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
-			<div class="columngameimg">
-				<h5>Rewound Running Remix</h5>
-				<h6>(Brackeys 2020.2 "Rewind" Game Jam )</h6>
-		  		<img id="imageR3" style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/R3Logo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();">Logo</button>
-		  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Gameplay 1</button>
-		  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Gameplay 2</button>
-		  	</div>
+			<div class="columnporfoliosplitter">
+				<A href="gerardo-portfolio-games.html">
+					<div style="align-content: center">
+						<h5>Video Games</h5>
+						<img style="height: 100%; width: 100%; object-fit:contain" src="images/R3Logo.png">
+					</div>
+				</A>
+			</div>
 
-		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
-		  			This game is a platforming auto-runner... in reverse!? The player must press the 'jump' button as the player would normally be jumping as the whole level rewinds to the very beginning in this rhythm game disguised as a 2D platformer created in just 4 days! 
-		  			</br>
-		  			</br>
-					Originally made for the Brackeys "Rewind" game jam, it was made as an auto runner platformer disguized as a rhythm game. I did all of the programming for the game as well as the UI/UX design, SFX, general game design, and acted as team director. 
+			<div class="columnporfoliosplitter">
+				<A href="gerardo-portfolio-miscellaneous.html">
+					<div style="align-content: center">
+						<h5>Miscellaneous</h5>
+						<img style="height: 100%; width: 100%; object-fit:contain" src="images/ImproveSketching.jpg">
+					</div>
+				</A>
+			</div>
 
-					<!--
-					I have since "Remastered" the game after the jam period to add bug fixes, controller support, a high-score feature, aidio controls, support for multiple resolution monitors, as well as general stability and performance enhancements. 
-					-->
-
-					</br>
-					</br>
-
-					<E><b>Link to download:</b></E>
-					<A href="https://persomatey.itch.io/rewound-running-remix">
-						<E>
-							<b>https://persomatey.itch.io/rewound-running-remix</b>
-						</E>
-					</A>
-
-					</br>
-
-					<E><b>Link to GitHib repository:</b></E>
-					<A href="https://github.com/Persomatey/ProjectRewindRhythm">
-						<E>
-							<b>https://github.com/Persomatey/ProjectRewindRhythm</b>
-						</E>
-					</A>
-				</p>
-		  	</div>
-
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
-		</div>
-
-		<!-- End Rewound Running Remix -->
-		<hr/>
-		<!-- Legend of Legacy -->
-
-		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
-			<div class="columngameimg">
-				<h5>Legend of Fantasy</h5>
-				<h6>(COC CSC Spring 2019)</h6>
-		  		<img  id="imageLoF" style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/LoFLogo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();">Logo</button>
-		  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Gameplay 1</button>
-		  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Gameplay 2</button>
-		  	</div>
-
-		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
-		  			A top-down Zelda-like game with a fantasy theme. Fight your way through droves of villainous monsters such as orcs and mushrooms to make your way to the end to defeat the scourge of the Fantaswhere Forest, Orcutoryx. 
-		  			</br>
-		  			</br>
-					As my last year as <b>President of the Computer Science Club</b>, I wanted to go out with a bang! I operated as <b>director</b> and <b>lead programmer</b> for this project. I worked on many aspects of the overall game. I programmed the core movement, health systems, animation rigging, boss mob behavior, and many other aspects of the game. You can see my name commented on pretty much every script. 
-					</br>
-					</br>
-
-					<E><b>Link to download:</b></E>
-					<A href="https://coc-computerscienceclub.itch.io/legend-of-fantasy">
-						<E>
-							<b>https://coc-computerscienceclub.itch.io/legend-of-fantasy</b>
-						</E>
-					</A>
-
-					</br>
-
-					<E><b>Link to GitHib repository:</b></E>
-					<A href="https://github.com/CanyonsCSClub/Spring2019">
-						<E>
-							<b>https://github.com/CanyonsCSClub/Spring2019</b>
-						</E>
-					</A>
-				</p>
-		  	</div>
-
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
 		</div>
-
-		<!-- End Legend of Legacy -->
-		<hr/>
-		<!-- Space Shooter 9000 -->
-
-		<div class="row">
-			<div class="columnside">
-				<p></p>
-			</div>
-
-			<div class="columngameimg">
-				<h5>Space Shooter 9000</h5>
-				<h6>(COC CSC Fall 2017)</h6>
-		  		<img  id="imageSS" style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/SS9000Logo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();">Logo</button>
-		  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Gameplay 1</button>
-		  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Gameplay 2</button>
-		  	</div>
-
-		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
-		  			A side-scrolling space shooter arcade game with a low poly aesthetic. Battle through wave after wave of enemy ships as you plunge deep into enemy territory. 
-		  			</br>
-					</br>
-					My first game as <b>President of the Computer Science Club</b>, we went for a simple arcade shooter. I operated as <b>director</b> and <b>lead programmer</b> for this project. I worked on nearly every aspect of the game. I programmed most of the enemy AI, the player projectiles, the enemy spawn system, the point and high score system, the health system, the unlock system, 3D modeling and animation, and many other aspects of the game. You can see my name commented on nearly every script in the game. 
-					</br>
-					</br>
-
-					<E><b>Link to download:</b></E>
-					<A href="https://coc-computerscienceclub.itch.io/space-shooter-9000">
-						<E>
-							<b>https://coc-computerscienceclub.itch.io/space-shooter-9000</b>
-						</E>
-					</A>
-
-					</br>
-
-					<E><b>Link to GitHib repository:</b></E>
-					<A href="https://github.com/CanyonsCSClub/Fall2017">
-						<E>
-							<b>https://github.com/CanyonsCSClub/Fall2017</b>
-						</E>
-					</A>
-				</p>
-		  	</div>
-
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
-		</div>
-
-		<!-- End Space Shooter 9000 -->
-		<hr/>
-		<!-- Factory -->
-
-		<div class="row">
-			<div class="columnside">
-				<p></p>
-			</div>
-
-			<div class="columngameimg">
-				<h5>Factory</h5>
-				<h6>(COC CSC Fall 2016)</h6>
-		  		<img  id="imageFa" style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/FactoryLogo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();">Logo</button>
-		  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Gameplay 1</button>
-		  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Gameplay 2</button>
-		  	</div>
-
-		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
-		  			A top-down shooter with a military theme. Grind your way through hoards of zombies and droves of drones as you fight your way to the large boss drone at the end of the level to recapture the factory! 
-		  			</br>
-					</br>
-					This was the first finished project that I worked on in <b>Computer Science Club</b>. I worked on the death state of the game.  
-					</br>
-					</br>
-
-					<E><b>Link to download:</b></E>
-					<A href="https://coc-computerscienceclub.itch.io/factory">
-						<E>
-							<b>https://coc-computerscienceclub.itch.io/factory</b>
-						</E>
-					</A>
-
-					</br>
-
-					<E><b>Link to GitHib repository:</b></E>
-					<A href="https://github.com/CanyonsCSClub/Fall2016">
-						<E>
-							<b>https://github.com/CanyonsCSClub/Fall2016</b>
-						</E>
-					</A>
-				</p>
-		  	</div>
-
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
-		</div>
-		<!-- End Factory -->
 
 	</body>
 </html>
