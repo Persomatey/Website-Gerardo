@@ -167,6 +167,13 @@ hr
   display: table-cell;
 }
 
+.columnmiscbox
+{
+  float: left; 
+  width: 30.666%;
+  display: table-cell;
+}
+
 .columnporfoliosplitter
 {
   padding-top: 2%;
