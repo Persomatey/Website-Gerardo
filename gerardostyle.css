@@ -48,7 +48,7 @@ h2
   text-align: left;
   padding-right: 10px;
   padding-left: 0px;
-  color: grey;
+  color: dimgrey;
   position: relative;
   margin-top: 0;
   margin-bottom: 0px;
@@ -245,7 +245,7 @@ input[type=submit]:hover {
     D
     {
       text-decoration: none;
-      color: grey; 
+      color: dimgrey; 
       padding-right: 0px;
       padding-left: 20px;
     }
