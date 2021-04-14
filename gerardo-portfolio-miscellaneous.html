@@ -17,6 +17,16 @@
 			document.getElementById("myModal").style.display = "none";
 		}
 
+		function pauseAnim() 
+		{
+			document.getElementById("animA").paused; 
+		}
+
+		function playAnim() 
+		{
+			document.getElementById("animA").style.animation = "running"; 
+		}
+
 		var slideIndex = 1;
 		showSlides(slideIndex);
 
@@ -98,21 +108,22 @@
 
 		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">3D Art</h1>
 		<hr/>
+		<br>
 
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 			<!-- Waterfall Scene --> 
-			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
 				<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 		  	<!-- Train --> 
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+		  	<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
 		  		<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 		  	<!-- Seahorse Ship --> 
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+		  	<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
 		  		<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 
@@ -126,15 +137,15 @@
 				<p></p>
 			</div>
 			<!-- Delorian Space Ship --> 
-			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
 				<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 		  	<!-- Dragon Vehicle --> 
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+		  	<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
 		  		<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 		  	<!-- Tornado --> 
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+		  	<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
 		  		<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 
@@ -148,11 +159,11 @@
 				<p></p>
 			</div>
 			<!-- Sword -->
-			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
 				<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 		  	<!-- Car from Car Racer 9000 -->
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+		  	<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
 		  		<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 		  	<div class="columnside">
@@ -165,6 +176,7 @@
 		<hr/>
 		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">2D Art</h1>
 		<hr/>
+		<br>
 
 		<div class="row">
 			<div class="columnside">
@@ -172,15 +184,15 @@
 			</div>
 			<!-- Black and White Walking -->
 			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-				<img src="images-misc/Tarot Hanged Man Bat.png" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(1)" class="hover-shadow cursor">
+				<img src="images-misc/Tarot Hanged Man Bat.png" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(1)" class="hover-shadow cursor">
 		  	</div>
 		  	<!-- Tarot Card -->
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-		  		<img src="images-misc/Tarot Hanged Man Bat.png" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(2)" class="hover-shadow cursor">
+		  		<img src="images-misc/Tarot Hanged Man Bat.png" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(2)" class="hover-shadow cursor">
 		  	</div>
 		  	<!-- Tree Landscape 2D Art -->
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-		  		<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
+		  		<img src="images-misc/Yumi5.jpg" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
 		  	</div>
 
 		  	<div class="columnside">
@@ -194,11 +206,11 @@
 			</div>
 			<!-- Centipede Enemy 2D Art -->
 			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-				<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(4)" class="hover-shadow cursor">
+				<img src="images-misc/Yumi5.jpg" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(4)" class="hover-shadow cursor">
 		  	</div>
 		  	<!-- Crystal Rock 2D Art -->
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-		  		<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(5)" class="hover-shadow cursor">
+		  		<img src="images-misc/Yumi5.jpg" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(5)" class="hover-shadow cursor">
 		  	</div>
 
 		  	<div class="columnside">
@@ -211,6 +223,11 @@
 		<hr/>
 		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Animations</h1>
 		<hr/>
+		<br>
+
+		<script>
+			
+		</script>
 
 		<div class="row">
 			<div class="columnside">
@@ -218,21 +235,24 @@
 			</div>
 			<!-- Moon Guy Walk Cycle -->
 			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-				<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(6)" class="hover-shadow cursor">
+				<img src="images-misc/YetiWalkCycle.gif" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(6)" class="hover-shadow cursor">
 		  	</div>
 		  	<!-- Yeti Guy Walk Cycle -->
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-		  		<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(7)" class="hover-shadow cursor">
+		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+		  		<img src="images-misc/YetiWalkCycle.gif" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(7)" class="hover-shadow cursor">
 		  	</div>
 		  	<!-- Cancer Cells Multiplying -->
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-		  		<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(8)" class="hover-shadow cursor">
+		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+		  		<img src="images-misc/YetiWalkCycle.gif" style="padding-top:0px; max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(7)" class="hover-shadow cursor">
 		  	</div>
 
 		  	<div class="columnside">
 		  		<p></p>
 		  	</div>
 		</div>
+
+		<br>
+		<br>
 
 		<!-- Light Box Stuff -->
 
@@ -273,22 +293,22 @@
 				</div>
 				<!-- Animations Lightboxes -->
 				<div class="mySlides">
-					<div class="caption-text" style="top: 585px;left: 29%;">
-						<b>Title 6</b> <br> <sub>A description that can describe things descriptively.</sub>
+					<div class="caption-text" style="top: 585px;left: 26.4%;">
+						<b>Yeti Guy Walking</b> <br> <sub>A walk cycle for a yeti character made for a class project.</sub>
 					</div>
-					<img src="images-misc/Yumi5.jpg" style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
+					<img src="images-misc/YetiWalkCycle.gif" style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
 				</div>
 				<div class="mySlides">
 					<div class="caption-text" style="top: 585px;left: 29%;">
 						<b>Title 7</b> <br> <sub>A description that can describe things descriptively.</sub>
 					</div>
-					<img src="images-misc/Yumi5.jpg" style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
+					<img src="images-misc/YetiWalkCycle.gif" style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
 				</div>
 				<div class="mySlides">
 					<div class="caption-text" style="top: 585px;left: 29%;">
 						<b>Title 8</b> <br> <sub>A description that can describe things descriptively.</sub>
 					</div>
-					<img src="images-misc/Yumi5.jpg" style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
+					<img src="images-misc/YetiWalkCycle.gif" style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
 				</div>
 
 
