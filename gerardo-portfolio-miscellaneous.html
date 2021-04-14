@@ -6,6 +6,57 @@
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script>
+		function openModal() 
+		{
+			document.getElementById("myModal").style.display = "block";
+		}
+
+		function closeModal() 
+		{
+			document.getElementById("myModal").style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) 
+		{
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) 
+		{
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) 
+		{
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			var captionText = document.getElementById("caption");
+			if (n > slides.length) 
+			{
+				slideIndex = 1
+			}
+			if (n < 1) 
+			{
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) 
+			{
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) 
+			{
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
 	<style> 
 		model-viewer
 		{
@@ -34,15 +85,15 @@
 				</h3>
 			</div>
 
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
+			<div class="columnside">
+				<p></p>
+			</div>
 		</div>
 
 		<hr/>
 
 		<!-- Portfolio Unique -->
-		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Miscellaneous</h1>
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">3D Art</h1>
 		<hr/>
 
 		<div class="row">
@@ -51,7 +102,7 @@
 			</div>
 
 			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-				<model-viewer src="./models/DamagedHelmet.glb" auto-rotate camera-controls></model-viewer>
+				<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
@@ -59,13 +110,17 @@
 		  	</div>
 
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-		  		<model-viewer src="./models/Astronaut.glb" auto-rotate camera-controls></model-viewer>
+		  		<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
 		  	</div>
 
 		  	<div class="columnside">
 		  		<p></p>
 		  	</div>
 		</div>
+
+		<hr/>
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">2D Art</h1>
+		<hr/>
 
 		<div class="row">
 			<div class="columnside">
@@ -73,16 +128,15 @@
 			</div>
 
 			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-				<img src="images/PigRunning.gif">
+				<img src="images-misc/sandwich window.PNG" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(1)" class="hover-shadow cursor">
 		  	</div>
 
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-		  		<img src="images/Yumi1.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;">
-
+		  		<img src="images-misc/Tarot Hanged Man Bat.png" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(2)" class="hover-shadow cursor">
 		  	</div>
 
 		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-		  		<img src="images/Yumi2.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;">
+		  		<img src="images-misc/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;" onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
 		  	</div>
 
 		  	<div class="columnside">
@@ -90,27 +144,31 @@
 		  	</div>
 		</div>
 
-		<div class="row">
-			<div class="columnside">
-				<p></p>
+		<!-- Light Box Stuff -->
+
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+
+			<div class="modal-content">
+				<div class="mySlides">
+					<img src="images-misc/sandwich window.PNG" style="position:absolute; top:0px; left:8%; object-fit:contain; width:800px; height:800px">
+				</div>
+
+				<div class="mySlides">
+					<img src="images-misc/Tarot Hanged Man Bat.png" style="position:absolute; top:0px; left:8%; object-fit:contain; width:800px; height:800px">
+				</div>
+
+				<div class="mySlides">
+					<img src="images-misc/Yumi5.jpg" style="position:absolute; top:0px; left:8%; object-fit:contain; width:800px; height:800px">
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
 			</div>
-
-			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-				<img src="images/Yumi3.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;">
-		  	</div>
-
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-		  		<img src="images/Yumi4.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;">
-		  	</div>
-
-		  	<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-		  		<img src="images/Yumi5.jpg" style="max-height:350px; height:100%; width:100%; object-fit:contain;">
-		  	</div>
-
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
 		</div>
-
 	</body>
 </html>
