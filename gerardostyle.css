@@ -121,6 +121,12 @@ hr
   margin-right: auto;
 }
 
+.scrollDiv
+{
+  max-height: 70vh; 
+  overflow: hidden;
+}
+
 .row
 {
   display: table;
@@ -247,6 +253,7 @@ input[type=submit]:hover {
     {
       text-decoration: none;
       color: black; 
+      font-size: 17px;
     }
     F
     {
