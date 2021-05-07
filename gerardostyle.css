@@ -383,6 +383,16 @@ body
   animation-play-state: paused;
 }
 
+.hunterlink
+{
+  color: slategrey;
+}
+
+.hunterlink:hover
+{
+  color: slateblue;
+}
+
 /* Font Control Stuff */
     A
     {
@@ -478,14 +488,13 @@ body
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonR3YeSel 
     {
       border: none;
-      color: white;
+      color: yellow;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -493,7 +502,6 @@ body
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #0000d1; 
       border-radius: 14px;
     }
@@ -508,14 +516,13 @@ body
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonLoFYeSel 
     {
       border: none;
-      color: white;
+      color: palegoldenrod;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -523,7 +530,6 @@ body
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #2e7630; 
       border-radius: 14px;
     }
@@ -538,14 +544,13 @@ body
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonSSYeSel 
     {
       border: none;
-      color: white;
+      color: skyblue;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -553,37 +558,6 @@ body
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #f41818; 
-      border-radius: 14px;
-    }
-    .buttonFaUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonFaYeSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-
-      background-color: #195195; 
       border-radius: 14px;
     }
