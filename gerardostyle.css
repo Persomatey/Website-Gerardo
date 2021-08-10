@@ -120,43 +120,44 @@ hr
   margin-right: auto;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 50px;
+.modal 
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 2.5%; /**/
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: black;
+.modal-content 
+{
+  background-color: whitesmoke;
+  padding-right: 10px; /**/
   margin: auto;
-  padding: 0;
-  width: 50%;
-  max-width: 1200px;
+  border: 1px solid #888; 
+  width: 75%;
+  height: 90%;
 }
 
 /* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10%;
-  right: 25.75%;
-  font-size: 50px;
+.close 
+{
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .close:hover,
-.close:focus {
-  color: #999;
+.close:focus 
+{
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
@@ -173,17 +174,14 @@ hr
 .prev,
 .next {
   cursor: pointer;
-  position:absolute;
-  top: 1900%;
+  position: absolute;
+  top: 35vh;
   width: auto;
-  padding: 16px;
-  margin-top: -50px;
   color: white;
   font-weight: bold;
   font-size: 50px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
   -webkit-user-select: none;
 }
 

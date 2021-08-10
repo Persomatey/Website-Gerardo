@@ -1,412 +1,310 @@
 <!doctype html>
 <html style="background-color:lightgrey;">
-
-<head>
-	<title>Gerardo Bonnet - Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="gerardostyle.css">
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script>
-	function openModal() {
-		document.getElementById("myModal").style.display = "block";
-	}
-
-	function closeModal() {
-		document.getElementById("myModal").style.display = "none";
-	}
-
-	function pauseAnim() {
-		document.getElementById("animA").paused;
-	}
-
-	function playAnim() {
-		document.getElementById("animA").style.animation = "running";
-	}
-
-	var slideIndex = 1;
-	showSlides(slideIndex);
-
-	function plusSlides(n) {
-		showSlides(slideIndex += n);
-	}
-
-	function currentSlide(n) {
-		showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("demo");
-		var captionText = document.getElementById("caption");
-		if (n > slides.length) {
-			slideIndex = 1
-		}
-		if (n < 1) {
-			slideIndex = slides.length
-		}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex - 1].style.display = "block";
-		dots[slideIndex - 1].className += " active";
-		captionText.innerHTML = dots[slideIndex - 1].alt;
-	}
-</script>
-<style>
-	model-viewer {
-		margin: 0 auto;
-		width: 100%;
-		height: 350px;
-	}
-</style>
-
-<body style="background-color:lightgrey;">
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-
-		<div class="columnheader">
-			<A href="gerardo.html">
-				<h1>Gerardo Bonnet</h1>
-				<h2>Art & Animation</h2>
-			</A>
-		</div>
-
-		<div class="columnheader">
-			<h3>
-				<A href="gerardo-portfolio.html">
-					<C>Portfolio</C>
-				</A>
-				<A href="gerardo.html">
-					<D>About</D>
-				</A>
-			</h3>
-		</div>
-
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<hr />
-
-	<!-- Portfolio Unique -->
-
-	<!-- 3D Art -->
-
-	<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">3D Art</h1>
-	<hr />
-	<br>
-
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Waterfall Scene -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
-			<model-viewer src="./models/WaterfallglTF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<!-- Mushroom House Scene -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
-			<model-viewer src="./models/DemoEnvirogTF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<!-- Seahorse Ship -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
-			<model-viewer src="./models/Striker glTF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Delorean Space Ship -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
-			<model-viewer src="./models/PlayerShip GLTH.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<!-- Dragon Vehicle -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
-			<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<!-- Tornado -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
-			<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Sword -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
-			<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<!-- Train -->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
-			<model-viewer src="./models/Trevithick GLHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<!-- Car from Car Racer 9000 (maybe)-->
-		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
-			<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate
-				camera-controls></model-viewer>
-		</div>
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<!-- 2D Art -->
-
-	<hr />
-	<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">2D Art</h1>
-	<hr />
-	<br>
-
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Black and White Walking -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/Walking Figure.png"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(1)" class="hover-shadow cursor">
-		</div>
-		<!-- Tarot Card -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-			<img src="images-misc/Tarot Hanged Man Bat.png"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(2)" class="hover-shadow cursor">
-		</div>
-		<!-- Tree Landscape 2D Art -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-			<img src="images-misc/Yumi5.jpg" style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
-		</div>
-
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Centipede Enemy 2D Art -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/Yumi5.jpg" style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(4)" class="hover-shadow cursor">
-		</div>
-		<!-- Crystal Rock 2D Art -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-			<img src="images-misc/Yumi5.jpg" style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(5)" class="hover-shadow cursor">
-		</div>
-
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<!-- Animations -->
-
-	<hr />
-	<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Animations</h1>
-	<hr />
-	<br>
-
+	<head>
+		<title>Gerardo Bonnet - Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="gerardostyle.css">
+	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script>
+
+		function Open2DModal(img, title, desc)
+		{
+			document.getElementById("2DModalImg").src = img; 
+			document.getElementById("2DModalTitle").innerHTML = title; 
+			document.getElementById("2DModalDesc").innerHTML = desc; 
+			modal = document.getElementById("2DModal"); 
+			modal.style.display = "block";
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+
+		function OpenAnimModal(url, title, desc)
+		{
+			document.getElementById("AnimModalVid").src = url;
+			document.getElementById("AnimModalTitle").innerHTML = title; 
+			document.getElementById("AnimModalDesc").innerHTML = desc; 
+			modal = document.getElementById("AnimModal"); 
+			modal.style.display = "block";
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+
+		function Open3DModal(dir, title, desc)
+		{
+			document.getElementById("3DModel").src = dir; 
+			document.getElementById("3DModalTitle").innerHTML = title; 
+			document.getElementById("3DModalDesc").innerHTML = desc; 
+			modal = document.getElementById("3DModal"); 
+			modal.style.display = "block";
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+
 
 	</script>
 
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Moon Guy Walk Cycle -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/MoonWalk-NoBg.gif"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(6)" class="hover-shadow cursor">
-		</div>
-		<!-- Yeti Guy Walk Cycle -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-			<img src="images-misc/YetiWalkCycle.gif"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(7)" class="hover-shadow cursor">
-		</div>
-		<!-- Cancer Cells Multiplying -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-			<img src="images-misc/Cell-Split---white-background.gif"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(8)" class="hover-shadow cursor">
-		</div>
+	<style>
+		model-viewer 
+		{
+			margin: 0 auto;
+			width: 100%;
+			height: 350px;
+		}
+	</style>
 
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
-		<!-- Lemonade Stand Scene -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/Lemonade-Stand.gif"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(9)" class="hover-shadow cursor">
-		</div>
-		<!-- Tornado Animation -->
-		<div class="columnmiscbox" sty;e="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/Tornado-Animation.gif"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(10)" class="hover-shadow cursor">
-		</div>
-		<!-- Credits Animation -->
-		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/credits---Gerardo.gif"
-				style="padding-top:0px; height:350px; width:350px; object-fit:cover;"
-				onclick="openModal(); currentSlide(11)" class="hover-shadow cursor">
-		</div>
-
-		<div class="columnside">
-			<p></p>
-		</div>
-	</div>
-
-	<br>
-	<br>
-
-	<!-- Light Box Stuff -->
-
-	<div id="myModal" class="modal">
-		<span class="close cursor" onclick="closeModal()">&times;</span>
-
-		<div class="modal-content">
-			<!-- 2D Art Lightboxes -->
-			<div class="mySlides">
-				<div class="caption-text" style="top: 740px;left: 29%;">
-					<b>Title 1</b> <br> <sub>A description that can describe things descriptively.</sub>
-				</div>
-				<img src="images-misc/Walking Figure.png"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<div class="mySlides">
-				<div class="caption-text" style="top: 740px;left: 12.5%;">
-					<b>Tarot Card: The Hanged Man</b> <br> <sub>Originally made for the College of the Canyons Art Club,
-						this piece went on display in the art hall.</sub>
-				</div>
-				<img src="images-misc/Tarot Hanged Man Bat.png"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px;left: 29%;">
-					<b>"Yumi & the Yokai" Demo Project Environment Concept"</b> <br> <sub>A description that can
-						describe things descriptively.</sub>
-				</div>
-				<img src="images-misc/Yumi5.jpg"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px;left: 29%;">
-					<b>Title 4</b> <br> <sub>A description that can describe things descriptively.</sub>
-				</div>
-				<img src="images-misc/Yumi5.jpg"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px;left: 29%;">
-					<b>Title 5</b> <br> <sub>A description that can describe things descriptively.</sub>
-				</div>
-				<img src="images-misc/Yumi5.jpg"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<!-- Animations Lightboxes -->
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px;left: 26.4%;">
-					<b>Moon Guy Walking</b> <br> <sub>A walk cycle for a yeti character made for a class project.</sub>
-				</div>
-				<img src="images-misc/MoonWalk-NoBg.gif"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px;left: 29%;">
-					<b>Yeti Guy Walking</b> <br> <sub>A walk cycle for a yeti character made for a class project.</sub>
-				</div>
-				<img src="images-misc/YetiWalkCycle.gif"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px;left: 29%;">
-					<b>Cell Creature Multiplication</b> <br> <sub>A description that can describe things
-						descriptively.</sub>
-				</div>
-				<img src="images-misc/Cell-Split---white-background.gif"
-					style="position:absolute; top:0px; left:13%; object-fit:contain; width:700px; height:700px">
-			</div>
-			<!-- Slide 9 -->
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px; left: 29%;">
-					<b>Lemonade Stand Animation Scene</b> <br> <sub>Description describing descriptive describables
-						descriptively.
-					</sub>
-				</div>
-				<img src="images-misc/Lemonade-Stand.gif"
-					style="position: absolute; top: 0px; left: 13%; object-fit: contain; width: 700px; height: 700px;">
-			</div>
-			<!-- Slide 10 -->
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px; left: 29%;">
-					<b>Tornado Fluid & Scene Animation</b> <br> <sub>Description describing descriptive describables
-						descriptively.
-					</sub>
-				</div>
-				<img src="images-misc/Tornado-Animation.gif"
-					style="position: absolute; top: 0px; left: 13%; object-fit: contain; width: 700px; height: 700px;">
-			</div>
-			<!-- Slide 11 -->
-			<div class="mySlides">
-				<div class="caption-text" style="top: 585px; left: 29%;">
-					<b>Name Bubble Pop</b> <br> <sub>Description describing descriptive describables descriptively.
-					</sub>
-				</div>
-				<img src="images-misc/credits---Gerardo.gif"
-					style="position: absolute; top: 0px; left: 13%; object-fit: contain; width: 700px; height: 700px;">
+	<body style="background-color:lightgrey;">
+		<div class="row">
+			<div class="columnside">
+				<p></p>
 			</div>
 
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="columnheader">
+				<A href="gerardo.html">
+					<h1>Gerardo Bonnet</h1>
+					<h2>Art & Animation</h2>
+				</A>
+			</div>
 
-			<div class="caption-container">
-				<p id="caption"></p>
+			<div class="columnheader">
+				<h3>
+					<A href="gerardo-portfolio.html">
+						<C>Portfolio</C>
+					</A>
+					<A href="gerardo.html">
+						<D>About</D>
+					</A>
+				</h3>
+			</div>
+
+			<div class="columnside">
+				<p></p>
 			</div>
 		</div>
-	</div>
-</body>
 
+		<hr />
+
+		<!-- Portfolio Unique -->
+
+		<!-- 3D Art -->
+
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">3D Art</h1>
+		<hr />
+		<br>
+
+		<div id="3DModal" class="modal">
+			<div id="3DContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<div style="object-fit:contain; padding-left:5%; padding-top:5%; width:90%; height:80%;"> 
+					<model-viewer id= "3DModel" src="" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
+				</div>
+				<div style="text-align:center; font-size:20px; padding-top:1%;">
+					<b id="3DModalTitle" style="font-size:30px;"></b>
+					<br>
+					<div id="3DModalDesc"> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Waterfall Scene (done)-->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
+				<img src="images-misc/waterfall.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/WaterfallglTF.glb`, `Lantasire Falls`, `Waterfall 3D model evnironment art for the now-defunct Byte Club Games project "Yumi and the Yokai".`);'>
+				<!-- <model-viewer src="./models/WaterfallglTF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer> -->
+			</div>
+			<!-- Mushroom House Scene (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/mushroom.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/WaterfallglTF.glb`, `title`, `desc.`);'>
+				<!-- <model-viewer src="./models/DemoEnvirogTF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer> -->
+			</div>
+			<!-- Seahorse Ship (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
+				<img src="images-misc/seahorse.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/WaterfallglTF.glb`, `title`, `desc.`);'>
+				<!-- <model-viewer src="./models/Striker glTF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer> -->
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Delorean Space Ship (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
+				<model-viewer src="./models/PlayerShip GLTH.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
+			</div>
+			<!-- Dragon Vehicle (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
+				<model-viewer src="./models/WheelRacerglHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
+			</div>
+			<!-- Train (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
+				<model-viewer src="./models/Trevithick GLHF.glb" skybox-image="skyboxes/Daylight Box UV.png" auto-rotate camera-controls></model-viewer>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<!-- 2D Art -->
+
+		<hr />
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">2D Art</h1>
+		<hr />
+		<br>
+
+		<div id="2DModal" class="modal">
+			<div id="2DContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<img id="2DModalImg" style="width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto" src="images-misc/Tarot Hanged Man Bat.png">
+				<div style="text-align:center; font-size:20px; padding-top:1%;">
+					<b id="2DModalTitle" style="font-size:30px;"></b>
+					<br>
+					<div id="2DModalDesc"> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Black and White Walking -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+				<img src="images-misc/Walking Figure.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Shadow of a Man`, `A man walks away, his shadow reflects his legacy.`);'>
+			</div>
+			<!-- Tarot Card -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/Tarot Hanged Man Bat.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Tarot Card: The Hanged Man`, `Originally made for the College of the Canyons Art Club, this piece went on display in the art hall.`);'>
+			</div>
+			<!-- Tree Landscape 2D Art -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+				<img src="images-misc/Yumi5.jpg" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Westward Tree`, `Environment concept art for the now-defunct Byte Club Games project "Yumi and the Yokai".`);'>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<!-- Still need to add "Centipede Enemy Digital Art" and "crystal Rock Digital Art" -->
+
+		<!-- Animations -->
+
+		<hr/>
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Animations</h1>
+		<hr/>
+		<br>
+
+		<div id="AnimModal" class="modal">
+			<div id="AnimContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<div style="width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto">
+					<iframe id="AnimModalVid" width=100% height=100% src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+				<div style="text-align:center; font-size:20px; padding-top:1%;">
+					<b id="AnimModalTitle" style="font-size:30px;"></b>
+					<br>
+					<div id="AnimModalDesc"> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Moon Guy Walk Cycle -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+				<img src="images-misc/MoonWalk-NoBg-Cropped.gif" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Moon Character Walk Cycle`, `A walk cycle animation for a moon character made for a class project.`);'>
+			</div>
+			<!-- Yeti Guy Walk Cycle -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/YetiWalkCycle.gif" style="padding-top:0px; height:37.3vh; width:18.2vw;; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Yeti Character Walk Cycle`, `A walk cycle animation for a yeti character made for a class project.`);'>
+			</div>
+			<!-- Credits Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+				<img src="images-misc/credits---Gerardo.gif" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Name Bubble Pop`, `A bubbly animation made for a class project.`);'>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!--Tornado Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+				<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
+					<img src="images-misc/TornadoThumbnail-LowRes.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='OpenAnimModal(`https://www.youtube.com/embed/6W4Q6KErX-g`, `Tornado`, `An animation featuring a fluid-based tornado for a VFX class project.`);'>
+				</div>
+			</div>
+			<!--Lemonade Stand Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+				<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
+					<img src="images-misc/LemonadeThumbnail.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='OpenAnimModal(`https://www.youtube.com/embed/jDCL_N2AnPo`, `Fish Stand`, `A short animation about a gluttonous penguin.`);'>
+				</div>
+			</div>
+			<!--Cancer Cells Multiplication Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+				<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
+					<img src="images-misc/CellsThumbnail.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='OpenAnimModal(`https://www.youtube.com/embed/Uvb5b3NXvNI`, `Cell Creature Mitosis`, `A short animation animation about a cell-like creature multiplying.`);'>
+				</div>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+	</body>
 </html>
