@@ -8,7 +8,7 @@ html
 p, li 
 {
   font-family: "Times New Roman", Times, serif
-  font-size: 18px;
+  font-size: 5vw;
   line-height: 2;
   letter-spacing: 1px;
 }
@@ -275,19 +275,18 @@ hr
 
 .columngameimg
 {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-left: 5vw;
   float: left; 
-  width: 32%;
+  width: 20vw;
   display: table-cell;
 }
 
 .columngamedes
 {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-left: 2vw;
+  padding-right: 2vw;
   float: left; 
-  width: 68%;
+  width: 40vw;
   display: table-cell;
 }
 
@@ -548,7 +547,7 @@ body
     .buttonSSYeSel 
     {
       border: none;
-      color: skyblue;
+      color: white;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;

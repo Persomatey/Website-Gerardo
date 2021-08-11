@@ -1,80 +1,760 @@
 <!doctype html>
 <html style="background-color:lightgrey;">
+	<head>
+		<title>Gerardo Bonnet - Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="gerardostyle.css">
+	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script>
 
-<head>
-	<title>Gerardo Bonnet - Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="gerardostyle.css">
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-</style>
+		// Modal Functions 
+		function Open2DModal(img, title, desc)
+		{
+			document.getElementById("2DModalImg").src = img; 
+			document.getElementById("2DModalTitle").innerHTML = title; 
+			document.getElementById("2DModalDesc").innerHTML = desc; 
+			modal = document.getElementById("2DModal"); 
+			modal.style.display = "block";
 
-<body style="background-color:lightgrey;">
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
 
-	<div class="row">
-		<div class="columnside">
-			<p></p>
-		</div>
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+		function OpenAnimModal(url, title, desc)
+		{
+			document.getElementById("AnimModalVid").src = url;
+			document.getElementById("AnimModalTitle").innerHTML = title; 
+			document.getElementById("AnimModalDesc").innerHTML = desc; 
+			modal = document.getElementById("AnimModal"); 
+			modal.style.display = "block";
 
-		<div class="columnheader">
-			<A href="gerardo.html">
-				<h1>Gerardo Bonnet</h1>
-				<h2>Art & Animation</h2>
-			</A>
-		</div>
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
 
-		<div class="columnheader">
-			<h3>
-				<A href="gerardo-portfolio.html">
-					<C>Portfolio</C>
-				</A>
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+		function Open3DModal(dir, title, desc)
+		{
+			document.getElementById("3DModel").src = dir; 
+			if(title == "KinokoHut")
+			{
+				document.getElementById("3DModalTitle").innerHTML = "Kinoko's Hut"; 
+			}
+			else
+			{
+				document.getElementById("3DModalTitle").innerHTML = title; 
+			}
+			document.getElementById("3DModalDesc").innerHTML = desc; 
+			modal = document.getElementById("3DModal"); 
+			modal.style.display = "block";
+
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
+
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+		function OpenVGModal(game)
+		{
+			gameInfoTaB = `
+			<div class="columngameimg" style="margin-top:15.0vh;">
+				<h5 style="font-size:2vw;">Take a Breath</h5>
+				<h6 style="font-size:1vw;">(Mini Jam 73 "Power" Game Jam)</h6>
+				<div id="TaBMedia">
+					<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/TaBLogoV2.png">
+				</div>
+				<div style="display: flex; justify-content: center; align-items: center;">
+					<F style="font-size:0.9vw;"><b>Images: </b></F>
+					<button id="ButTaB1" class="buttonTaBYeSel" onclick="ChangeImageTaBL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButTaB2" class="buttonTaBUnSel" onclick="ChangeImageTaBI1();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButTaB3" class="buttonTaBUnSel" onclick="ChangeImageTaBI2();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButTaB4" class="buttonTaBUnSel" onclick="ChangeImageTaBV();" style="font-size:0.9vw;">Gameplay</button>
+				</div>
+			</div>
+
+			<div class="columngamedes" style="margin-top:15.0vh;">
+				<p style="padding-left: 25px; font-size:0.9vw; margin-top: auto; margin-bottom:auto;">
+					Your spaceship is low on power and you're trapped in an asteroid belt! You can only divert power to one system at a time! Activate your thrusters to move, bash asteroids with your shield, or refill your oxygen. Navigate your way to each of the power cores then make your way out of the asteroid belt. Just don't forget to <i>Take a Breath</i>. 
+
+					</br>
+					</br>
+
+					Made for the Mini "Power" game jam, it was made as a navigational resource management game. I did all of the art assets with the jam's limitation of "only use 5 colors" to make it look like a retro GB game. I fully solo developed the game creating all of the <b>environment art</b>, <b>player art</b>, <b>animation</b>, <b>programming</b>, <b>level design</b>, and <b>systems design</b> myself in just 3 days. 
+
+					</br>
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to download:</b></E>
+					<A href="https://screams-from-the-cellar.itch.io/take-a-breath" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">PC (itch.io)</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to repository:</b></E>
+					<A href="https://github.com/TheThrillOfMurder/Mini-Jam-73---Power" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+			</div>
+			`;
+
+			gameInfoR3 = `
+			<div class="columngameimg" style="margin-top:15.75vh;">
+				<h5 style="font-size:2vw;">Rewound Running Remix</h5>
+				<h6 style="font-size:1vw;">(Brackeys 2020.2 "Rewind" Game Jam)</h6>
+				<div id="R3Media">
+					<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/R3Logo.png">
+				</div>
+				<div style="display: flex; justify-content: center; align-items: center;">
+					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+					<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButR34" class="buttonR3UnSel" onclick="ChangeImageR3V();" style="font-size:0.9vw;">Gameplay</button>
+				</div>
+			</div>
+
+			<div class="columngamedes" style="margin-top:15.75vh;">
+				<p style="padding-left: 25px; font-size:0.9vw; margin-top: auto; margin-bottom:auto;">
+					This game is a platforming auto-runner... in reverse!? The player must press the 'jump' button as the player would normally be jumping as the whole level rewinds to the very beginning in this rhythm game disguised as a 2D platformer.  
+
+					</br>
+					</br>
+
+					Made for the Brackeys "Rewind" game jam. I did all of the <b>environment art</b> and <b>background art</b> for the game as well as the <b>UI/UX art</b> and general game design in just 4 days. 
+
+					</br>
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to download:</b></E>
+					<A href="https://persomatey.itch.io/rewound-running-remix" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">PC (itch.io)</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to repository:</b></E>
+					<A href="https://github.com/Persomatey/ProjectRewindRhythm" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+			</div>
+			`;
+			
+			gameInfoLoF = `
+			<div class="columngameimg" style="margin-top:21.5vh;">
+				<h5 style="font-size:2vw;">Legend of Fantasy</h5>
+				<h6 style="font-size:1vw;">(COC CSC Spring 2019)</h6>
+				<div id="LoFMedia">
+					<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/LoFLogo.png">
+				</div>
+				<div style="display: flex; justify-content: center; align-items: center;">
+					<F style="font-size:0.9vw;"><b>Images: </b></F>
+					<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButLoF4" class="buttonLoFUnSel" onclick="ChangeImageLoFV();" style="font-size:0.9vw;">Gameplay</button>
+				</div>
+			</div>
+
+			<div class="columngamedes" style="margin-top:21.5vh;">
+				<p style="padding-left: 25px; font-size:0.9vw; margin-top: auto; margin-bottom:auto;">
+					A top-down Zelda-like game with a fantasy theme. Fight your way through droves of villainous monsters such as orcs and mushrooms to make your way to the end to defeat the scourge of the Fantaswhere Forest, Orcutoryx. 
+
+					</br>
+					</br>
+
+					As my last year as an <b>Officer</b> of the <b>Computer Science Club</b>, I integrated all of the animations for the game into the Unity game engine and made many of the UI assets for the game. I also helped with the overall <b>systems design</b> and <b>level design</b> of the project as well as <b>programmed</b> the Mushroom Enemy AI. 
+
+					</br>
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to download:</b></E>
+					<A href="https://coc-computerscienceclub.itch.io/legend-of-fantasy" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">PC (itch.io)</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to repository:</b></E>
+					<A href="https://github.com/CanyonsCSClub/Spring2019" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+			</div>
+			`;
+
+			gameInfoSS9000 = `
+			<div class="columngameimg" style="margin-top:14.5vh;">
+				<h5 style="font-size:2vw;">Space Shooter 9000</h5>
+				<h6 style="font-size:1vw;">(COC CSC Fall 2017)</h6>
+				<div id="SS9000Media">
+					<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/SS9000Logo.png">
+				</div>
+				<div style="display: flex; justify-content: center; align-items: center;">
+					<F style="font-size:0.9vw;"><b>Images: </b></F>
+					<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButSS4" class="buttonSSUnSel" onclick="ChangeImageSSV();" style="font-size:0.9vw;">Gameplay</button>
+				</div>
+			</div>
+
+			<div class="columngamedes" style="margin-top:14.5vh;">
+				<p style="padding-left: 25px; font-size:0.9vw; margin-top: auto; margin-bottom:auto;">
+					A side-scrolling space shooter arcade game with a low poly aesthetic. Battle through wave after wave of enemy ships as you plunge deep into enemy territory. 
+
+					</br>
+					</br>
+
+					My first game with the <b>Computer Science Club</b>, we went for a simple arcade shooter. I operated as <b>lead artist</b> and <b>lead animator</b> for this project. I 3D modeled and animated the player's default space ship and some of the enemy space ships. I did the <b>concept art</b> for all of the space ships in the game. 
+
+					</br>
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to download:</b></E>
+					<A style="font-size:0.9vw;" href="https://coc-computerscienceclub.itch.io/space-shooter-9000" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">PC (itch.io)</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E style="font-size:0.9vw;"><b>Link to repository:</b></E>
+					<A href="https://github.com/CanyonsCSClub/Fall2017" target="_blank">
+						<E style="font-size:0.9vw;">
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+			</div>
+			`;
+
+			switch(game)
+			{
+				case "TaB": document.getElementById("VGColumns").innerHTML = gameInfoTaB; break; 
+				case "R3": document.getElementById("VGColumns").innerHTML = gameInfoR3; break; 
+				case "LoF": document.getElementById("VGColumns").innerHTML = gameInfoLoF; break; 
+				case "SS9000": document.getElementById("VGColumns").innerHTML = gameInfoSS9000; break; 
+			}
+
+			modal = document.getElementById("VGModal"); 
+			modal.style.display = "block";
+
+			span.onclick = function() 
+			{
+				modal.style.display = "none";
+			}
+
+			window.onclick = function(event) 
+			{
+				if (event.target == modal) 
+				{
+					modal.style.display = "none";
+				}
+			}
+		}
+
+		// Take a Breath Functions
+		function ChangeImageTaBL()
+		{
+			document.getElementById("TaBMedia").innerHTML = '<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/TaBLogoV2.png">'; 
+
+			document.getElementById("ButTaB1").className = "buttonTaBYeSel";
+			document.getElementById("ButTaB2").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB3").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB4").className = "buttonTaBUnSel";
+
+			return false;
+		}
+		function ChangeImageTaBI1()
+		{
+			document.getElementById("TaBMedia").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: 9.3vh; margin-bottom: 9.3vh;" src="images-games/TaBGameplay1.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButTaB1").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB2").className = "buttonTaBYeSel";
+			document.getElementById("ButTaB3").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB4").className = "buttonTaBUnSel";
+			
+			return false;
+		}
+		function ChangeImageTaBI2()
+		{
+			document.getElementById("TaBMedia").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: 9.3vh; margin-bottom: 9.3vh;" src="images-games/TaBGameplay2.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButTaB1").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB2").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB3").className = "buttonTaBYeSel";
+			document.getElementById("ButTaB4").className = "buttonTaBUnSel";
+
+			return false;
+		}
+		function ChangeImageTaBV()
+		{
+			document.getElementById("TaBMedia").innerHTML = '<div style="width: 100%; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto;"><iframe width=100% height=391vh src="https://www.youtube.com/embed/-orClTtH2d4" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>'; 
+
+			document.getElementById("ButTaB1").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB2").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB3").className = "buttonTaBUnSel";
+			document.getElementById("ButTaB4").className = "buttonTaBYeSel";
+
+			return false;
+		}
+
+		// R3 Functions
+		function ChangeImageR3L()
+		{
+			document.getElementById("R3Media").innerHTML = '<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/R3Logo.png">'; 
+
+			document.getElementById("ButR31").className = "buttonR3YeSel";
+			document.getElementById("ButR32").className = "buttonR3UnSel";
+			document.getElementById("ButR33").className = "buttonR3UnSel";
+			document.getElementById("ButR34").className = "buttonR3UnSel";
+
+			return false;
+		}
+		function ChangeImageR3I1()
+		{
+			document.getElementById("R3Media").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top:5.25vh; margin-bottom:5.25vh;" src="images-games/R3Gameplay1.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButR31").className = "buttonR3UnSel";
+			document.getElementById("ButR32").className = "buttonR3YeSel";
+			document.getElementById("ButR33").className = "buttonR3UnSel";
+			document.getElementById("ButR34").className = "buttonR3UnSel";
+			
+			return false;
+		}
+		function ChangeImageR3I2()
+		{
+			document.getElementById("R3Media").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top:5.25vh; margin-bottom:5.25vh;" src="images-games/R3Gameplay2.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButR31").className = "buttonR3UnSel";
+			document.getElementById("ButR32").className = "buttonR3UnSel";
+			document.getElementById("ButR33").className = "buttonR3YeSel";
+			document.getElementById("ButR34").className = "buttonR3UnSel";
+
+			return false;
+		}
+		function ChangeImageR3V()
+		{
+			document.getElementById("R3Media").innerHTML = '<div style="width: 100%; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto;"><iframe width=100%vw height=315vh src="https://www.youtube.com/embed/2l0JYAdxMpk" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>'; 
+
+			document.getElementById("ButR31").className = "buttonR3UnSel";
+			document.getElementById("ButR32").className = "buttonR3UnSel";
+			document.getElementById("ButR33").className = "buttonR3UnSel";
+			document.getElementById("ButR34").className = "buttonR3YeSel";
+
+			return false;
+		}
+
+		// LoF Functions
+		function ChangeImageLoFL()
+		{
+			document.getElementById("LoFMedia").innerHTML = '<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/LoFLogo.png">'; 
+
+			document.getElementById("ButLoF1").className = "buttonLoFYeSel";
+			document.getElementById("ButLoF2").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF4").className = "buttonLoFUnSel";
+
+			return false;
+		}
+		function ChangeImageLoFI1()
+		{
+			document.getElementById("LoFMedia").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top:2.4vh; margin-bottom:2.4vh;" src="images-games/LoFGameplay1.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButLoF1").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF2").className = "buttonLoFYeSel";
+			document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF4").className = "buttonLoFUnSel";
+			
+			return false;
+		}
+		function ChangeImageLoFI2()
+		{
+			document.getElementById("LoFMedia").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top:2.4vh; margin-bottom:2.4vh;" src="images-games/LoFGameplay2.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButLoF1").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF2").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF3").className = "buttonLoFYeSel";
+			document.getElementById("ButLoF4").className = "buttonLoFUnSel";
+
+			return false;
+		}
+		function ChangeImageLoFV()
+		{
+			document.getElementById("LoFMedia").innerHTML = '<div style="width: 100%; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto;"><iframe width=100%vw height=261vh src="https://www.youtube.com/embed/DwehfYrfE_k" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>'; 
+
+			document.getElementById("ButLoF1").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF2").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+			document.getElementById("ButLoF4").className = "buttonLoFYeSel";
+
+			return false;
+		}
+
+		// SS Functions
+		function ChangeImageSSL()
+		{
+			document.getElementById("SS9000Media").innerHTML = '<img style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom:auto;" src="images-games/SS9000Logo.png">'; 
+
+			document.getElementById("ButSS1").className = "buttonSSYeSel";
+			document.getElementById("ButSS2").className = "buttonSSUnSel";
+			document.getElementById("ButSS3").className = "buttonSSUnSel";
+			document.getElementById("ButSS4").className = "buttonSSUnSel";
+
+			return false;
+		}
+		function ChangeImageSSI1()
+		{
+			document.getElementById("SS9000Media").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top:9.35vh; margin-bottom:9.35vh;" src="images-games/SS9000Gameplay1.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButSS1").className = "buttonSSUnSel";
+			document.getElementById("ButSS2").className = "buttonSSYeSel";
+			document.getElementById("ButSS3").className = "buttonSSUnSel";
+			document.getElementById("ButSS4").className = "buttonSSUnSel";
+			
+			return false;
+		}
+		function ChangeImageSSI2()
+		{
+			document.getElementById("SS9000Media").innerHTML = '<input type="image" style="width: 100%; object-fit: contain; margin-left: auto; margin-right: auto; margin-top:9.35vh; margin-bottom:9.35vh;" src="images-games/SS9000Gameplay2.png" onclick="OpenImageInNewTab(this.src)">'; 
+
+			document.getElementById("ButSS1").className = "buttonSSUnSel";
+			document.getElementById("ButSS2").className = "buttonSSUnSel";
+			document.getElementById("ButSS3").className = "buttonSSYeSel";
+			document.getElementById("ButSS4").className = "buttonSSUnSel";
+
+			return false;
+		}
+		function ChangeImageSSV()
+		{
+			document.getElementById("SS9000Media").innerHTML = '<div style="width: 100%; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto;"><iframe width=100%vw height=391vh src="https://www.youtube.com/embed/Z_3XtojWlSA" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>'; 
+
+			document.getElementById("ButSS1").className = "buttonSSUnSel";
+			document.getElementById("ButSS2").className = "buttonSSUnSel";
+			document.getElementById("ButSS3").className = "buttonSSUnSel";
+			document.getElementById("ButSS4").className = "buttonSSYeSel";
+
+			return false;
+		}
+
+		// Open Image In New Tab
+		function OpenImageInNewTab(url)
+		{
+			window.open(url, '_blank').focus();
+		}
+
+	</script>
+
+	<style>
+		model-viewer 
+		{
+			margin: 0 auto;
+			width: 100%;
+			height: 350px;
+		}
+	</style>
+
+	<body style="background-color:lightgrey;">
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="columnheader">
 				<A href="gerardo.html">
-					<D>About</D>
+					<h1>Gerardo Bonnet</h1>
+					<h2>Art & Animation</h2>
 				</A>
-			</h3>
+			</div>
+
+			<div class="columnheader">
+				<h3>
+					<A href="gerardo-portfolio.html">
+						<C>Portfolio</C>
+					</A>
+					<A href="gerardo.html">
+						<D>About</D>
+					</A>
+				</h3>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
 		</div>
 
-		<div class="columnside">
-			<p></p>
+		<hr />
+
+		<!-- Portfolio Unique -->
+
+		<!-- Video Games -->
+
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Video Games</h1>
+		<hr />
+		<br>
+
+		<div id="VGModal" class="modal">
+			<div id="VGContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<div id="VGColumns" style="padding-top:0vh;"></div>
+			</div>
 		</div>
-	</div>
 
-	<hr />
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Take A Breath-->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
+				<img src="images-games/TaBLogoV2.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:contain;" class="hover-shadow cursor" onclick='OpenVGModal("TaB");'>
+			</div>
+			<!-- Rewound Running Remix -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-games/R3Logo.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:contain;" class="hover-shadow cursor" onclick='OpenVGModal("R3");'>
+			</div>
+			<!-- Legend of Fantasy -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
+				<img src="images-games/LoFLogo.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:contain;" class="hover-shadow cursor" onclick='OpenVGModal("LoF");'>
+			</div>
 
-	<!-- Portfolio Unique -->
-
-	<div class="row" style="padding-top: 50px">
-
-		<div class="columnside">
-			<p></p>
+			<div class="columnside">
+				<p></p>
+			</div>
 		</div>
 
-		<div class="columnporfoliosplitter">
-			<A href="gerardo-portfolio-games.html">
-				<div style="align-content: center">
-					<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Video Games
-					</h1>
-					<img style="height: 100%; width: 100%; object-fit:contain" src="images-games/R3Logo.png">
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Space Shooter 9000 -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
+				<img src="images-games/SS9000Logo.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:contain;" class="hover-shadow cursor" onclick='OpenVGModal("SS9000");'>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<!-- 3D Art -->
+
+		<hr />
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">3D Art</h1>
+		<hr />
+		<br>
+
+		<div id="3DModal" class="modal">
+			<div id="3DContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<div style="object-fit:contain; padding-left:5%; padding-top:5%; width:90%; height:80%;"> 
+					<model-viewer id= "3DModel" src="" skybox-image="skyboxes/Daylight Box UV.png" style="width:100%; height:100%;" auto-rotate camera-controls></model-viewer>
 				</div>
-			</A>
-		</div>
-
-		<div class="columnporfoliosplitter">
-			<A href="gerardo-portfolio-miscellaneous.html">
-				<div style="align-content: center">
-					<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">3D & 2D Art
-					</h1>
-					<img style="height: 100%; width: 100%; object-fit:contain" src="images-misc/WheelRacer.png">
+				<div style="text-align:center; font-size:20px; padding-top:1%;">
+					<b id="3DModalTitle" style="font-size:30px;"></b>
+					<br>
+					<div id="3DModalDesc"> </div>
 				</div>
-			</A>
+			</div>
 		</div>
 
-		<div class="columnside">
-			<p></p>
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Waterfall Scene (done)-->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
+				<img src="images-misc/waterfall.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/WaterfallglTF.glb`, `Mizu Falls`, `Waterfall 3D model evnironment art for the now-defunct Byte Club Games project "Yumi and the Yokai".`);'>
+			</div>
+			<!-- Mushroom House Scene (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/mushroom.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/DemoEnvirogTF.glb`, (`KinokoHut`), `Mushroom Mut 3D model evnironment art for the now-defunct Byte Club Games project "Yumi and the Yokai".`);'>
+			</div>
+			<!-- Seahorse Ship (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
+				<img src="images-misc/seahorse.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/Striker glTF.glb`, `Striker Battle Ship`, `Enemy 3D model for the Game Makers Club project "Space Shooter 9000".`);'>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
 		</div>
 
-	</div>
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Belorian Space Ship (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%;">
+				<img src="images-misc/belorian.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/PlayerShip GLTH.glb`, `BeLorian BMC-12`, `Player 3D model for the Game Makers Club project "Space Shooter 9000".`);'>
+			</div>
+			<!-- Dragon Vehicle (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/draco.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/WheelRacerglHF.glb`, `Naga Racer`, `A sci-fi race car 3D model made for my Real-Time Videogame Animation class project..`);'>
+			</div>
+			<!-- Train (Done) -->
+			<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-left:2%;">
+				<img src="images-misc/train.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open3DModal(`./models/Trevithick GLHF.glb`, `Trevithick`, `A train 3D model based on the "Trevithick" train made for a class project.`);'>
+			</div>
 
-</body>
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
 
+		<!-- 2D Art -->
+
+		<hr />
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">2D Art</h1>
+		<hr />
+		<br>
+
+		<div id="2DModal" class="modal">
+			<div id="2DContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<img id="2DModalImg" style="width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto" src="images-misc/Tarot Hanged Man Bat.png">
+				<div style="text-align:center; font-size:20px; padding-top:1%;">
+					<b id="2DModalTitle" style="font-size:30px;"></b>
+					<br>
+					<div id="2DModalDesc"> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Black and White Walking -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+				<img src="images-misc/Walking Figure.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Shadow of a Man`, `A man walks away, his shadow reflects his legacy.`);'>
+			</div>
+			<!-- Tarot Card -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/Tarot Hanged Man Bat.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Tarot Card: The Hanged Man`, `Originally made for the College of the Canyons Art Club, this piece went on display in the art hall.`);'>
+			</div>
+			<!-- Tree Landscape 2D Art -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+				<img src="images-misc/Yumi5.jpg" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Westward Tree`, `Environment concept art for the now-defunct Byte Club Games project "Yumi and the Yokai".`);'>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<!-- Still need to add "Centipede Enemy Digital Art" and "crystal Rock Digital Art" -->
+
+		<!-- Animations -->
+
+		<hr/>
+		<h1 style="text-align: center; padding-top: 0px; padding-bottom: 0px; margin-top: 0px">Animations</h1>
+		<hr/>
+		<br>
+
+		<div id="AnimModal" class="modal">
+			<div id="AnimContent" class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<div style="width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto">
+					<iframe id="AnimModalVid" width=100% height=100% src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+				<div style="text-align:center; font-size:20px; padding-top:1%;">
+					<b id="AnimModalTitle" style="font-size:30px;"></b>
+					<br>
+					<div id="AnimModalDesc"> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!-- Moon Guy Walk Cycle -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+				<img src="images-misc/MoonWalk-NoBg-Cropped.gif" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Moon Character Walk Cycle`, `A walk cycle animation for a moon character made for a class project.`);'>
+			</div>
+			<!-- Yeti Guy Walk Cycle -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+				<img src="images-misc/YetiWalkCycle.gif" style="padding-top:0px; height:37.3vh; width:18.2vw;; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Yeti Character Walk Cycle`, `A walk cycle animation for a yeti character made for a class project.`);'>
+			</div>
+			<!-- Credits Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+				<img src="images-misc/credits---Gerardo.gif" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='Open2DModal(this.src, `Name Bubble Pop`, `A bubbly animation made for a class project.`);'>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+			<!--Tornado Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+				<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
+					<img src="images-misc/TornadoThumbnail-LowRes.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='OpenAnimModal(`https://www.youtube.com/embed/6W4Q6KErX-g`, `Tornado`, `An animation featuring a fluid-based tornado for a VFX class project.`);'>
+				</div>
+			</div>
+			<!--Lemonade Stand Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+				<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
+					<img src="images-misc/LemonadeThumbnail.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='OpenAnimModal(`https://www.youtube.com/embed/jDCL_N2AnPo`, `Fish Stand`, `A short animation about a gluttonous penguin.`);'>
+				</div>
+			</div>
+			<!--Cancer Cells Multiplication Animation -->
+			<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+				<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
+					<img src="images-misc/CellsThumbnail.png" style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor" onclick='OpenAnimModal(`https://www.youtube.com/embed/Uvb5b3NXvNI`, `Cell Creature Mitosis`, `A short animation animation about a cell-like creature multiplying.`);'>
+				</div>
+			</div>
+
+			<div class="columnside">
+				<p></p>
+			</div>
+		</div>
+
+	</body>
 </html>
