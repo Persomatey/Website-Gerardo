@@ -5,9 +5,25 @@
 	<title>Gerardo Bonnet - About</title>
 	<link rel="stylesheet" type="text/css" href="gerardostyle.css">
 </head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 </style>
+
+<script type="text/javascript">
+	function CopyEmailAddress() 
+	{
+		navigator.clipboard.writeText("huntercgoodin@gmail.com");
+	
+		var tooltip = document.getElementById("myTooltip").innerHTML = "Copied email address";
+	}
+	
+	function HoverOverEmailAddress() 
+	{
+		var tooltip = document.getElementById("myTooltip").innerHTML = "Copy to clipboard";
+	}
+</script>
 
 <body style="background-color:#dfe4eb">
 
@@ -75,9 +91,18 @@
 				</br>
 			</p>
 			<div style="text-align:center;">
+
+				<div class="tooltip">
+					<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+					<button class="btn" onclick="CopyEmailAddress()" onmouseout="HoverOverEmailAddress()"><E style="font-size:1.1vw; color:ghostwhite;"><b>gerardo.bonnet@gmail.com</b></E></button>
+				</div>
+
+				<!--
 				</br>
 				<E style="font-size:1.2vw;"><b>gerardo.bonnet@gmail.com</b></E>
 				</br>
+				-->
+
 				<A href="https://www.linkedin.com/in/gerardobonnet/" target="_blank">
 					<img style="width:2.5vw; object-fit:contain; padding-left:10px; padding-right:5px; padding-top:20px; display:inline;" src="images/LinkedInLogo.png">
 				</A>
