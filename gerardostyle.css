@@ -390,171 +390,215 @@ body
   color: slateblue;
 }
 
+/* Email Copy */
+.tooltip 
+{
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext 
+{
+	visibility: hidden;
+	width: 11vw;
+	font-size: 1vw;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -5.5vw;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after 
+{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext 
+{
+	visibility: visible;
+	opacity: 1;
+}
+
 /* Font Control Stuff */
-    A
-    {
-      text-decoration: none; 
-    } 
-    C
-    {
-      text-decoration: none;
-      color: black; 
-      padding-right: 0px;
-      padding-left: 20px;
-      font-size: 25px;
-    }
-    D
-    {
-      text-decoration: none;
-      color: dimgrey; 
-      padding-right: 0px;
-      padding-left: 20px;
-    }
-    E
-    {
-      text-decoration: none;
-      color: black; 
-      font-size: 17px;
-    }
-    F
-    {
-      text-decoration: none;
-      color: black; 
-      padding-right: 0px;
-      padding-left: 5px;
-      font-size: 18px;
-    }
+A
+{
+	text-decoration: none; 
+} 
+C
+{
+	text-decoration: none;
+	color: black; 
+	padding-right: 0px;
+	padding-left: 20px;
+	font-size: 25px;
+}
+D
+{
+	text-decoration: none;
+	color: dimgrey; 
+	padding-right: 0px;
+	padding-left: 20px;
+}
+E
+{
+	text-decoration: none;
+	color: black; 
+	font-size: 17px;
+}
+F
+{
+	text-decoration: none;
+	color: black; 
+	padding-right: 0px;
+	padding-left: 5px;
+	font-size: 18px;
+}
 
-    /* Scroll Bar Stuff */
-    ::-webkit-scrollbar 
-    {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track 
-    {
-      background: #f1f1f1; 
-    }
-    ::-webkit-scrollbar-thumb 
-    {
-      background: #888; 
-    }
-    ::-webkit-scrollbar-thumb:hover 
-    {
-      background: #555; 
-    }
+/* Scroll Bar Stuff */
+::-webkit-scrollbar 
+{
+	width: 10px;
+}
+::-webkit-scrollbar-track 
+{
+	background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb 
+{
+	background: #888; 
+}
+::-webkit-scrollbar-thumb:hover 
+{
+	background: #555; 
+}
 
-        /* Custom Button Stuff */
-    .buttonTaBUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
+	/* Custom Button Stuff */
+.buttonTaBUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonTaBYeSel 
-    {
-      border: none;
-      color: #d1ffd2;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonTaBYeSel 
+{
+	border: none;
+	color: #d1ffd2;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 
-      background-color: #00aa00; 
-      border-radius: 14px;
-    }
-    .buttonR3UnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonR3YeSel 
-    {
-      border: none;
-      color: yellow;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #0000d1; 
-      border-radius: 14px;
-    }
-    .buttonLoFUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonLoFYeSel 
-    {
-      border: none;
-      color: palegoldenrod;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #2e7630; 
-      border-radius: 14px;
-    }
-    .buttonSSUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonSSYeSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #f41818; 
-      border-radius: 14px;
-    }
+	background-color: #00aa00; 
+	border-radius: 14px;
+}
+.buttonR3UnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonR3YeSel 
+{
+	border: none;
+	color: yellow;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #0000d1; 
+	border-radius: 14px;
+}
+.buttonLoFUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonLoFYeSel 
+{
+	border: none;
+	color: palegoldenrod;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #2e7630; 
+	border-radius: 14px;
+}
+.buttonSSUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonSSYeSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #f41818; 
+	border-radius: 14px;
+}
