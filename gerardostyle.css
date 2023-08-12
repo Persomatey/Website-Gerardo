@@ -434,6 +434,30 @@ body
 	opacity: 1;
 }
 
+.btn 
+{
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.box 
+{
+	position: relative;
+	width: 50%;
+}
+.box:before 
+{
+	content: "";
+	float: left;
+	padding-top: 100%;
+}
+.content 
+{
+	float: left;
+}
+
 /* Font Control Stuff */
 A
 {
