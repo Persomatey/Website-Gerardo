@@ -10,8 +10,16 @@
 <script>
 
 	// Modal Functions 
-	function Open2DModal(img, title, desc) {
+	function Open2DModal(img, title, desc, pix) {
 		document.getElementById("2DModalImg").src = img;
+		if (pix == true)
+		{
+			document.getElementById("2DModalImg").style = "image-rendering: pixelated; width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto"; 
+		}
+		else
+		{
+			document.getElementById("2DModalImg").style = "width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto"; 
+		}
 		document.getElementById("2DModalTitle").innerHTML = title;
 		document.getElementById("2DModalDesc").innerHTML = desc;
 		modal = document.getElementById("2DModal");
@@ -508,7 +516,6 @@
 	</div>
 
 	<div class="row">
-		<!-- Video Games - Row 1 -->
 		<div class="columnside">
 			<p></p>
 		</div>
@@ -536,7 +543,6 @@
 	</div>
 
 	<div class="row">
-		<!-- Video Games - Row 2-->
 		<div class="columnside">
 			<p></p>
 		</div>
@@ -634,7 +640,6 @@
 	</div>
 
 	<div class="row">
-		<!-- 3D Art - Row 3-->
 		<div class="columnside">
 			<p></p>
 		</div>
@@ -648,7 +653,7 @@
 		<div class="columnmiscbox" style="padding-top:0px; object-fit:contain; padding-right:2%; padding-left:2%;">
 			<img src="images-misc/Simpson House Render.jpg"
 				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `The Simpsons House`, `Using Maya Toon Shaders to achieve as close to a 2D appearance as possible.`);'>
+				onclick='Open2DModal(this.src, `The Simpsons House`, `Using Maya Toon Shaders to achieve as close to a 2D appearance as possible.`, false);'>
 		</div>
 
 		<div class="columnside">
@@ -668,8 +673,7 @@
 			<span class="close" id="span">
 				<!--&times;-->
 			</span>
-			<img id="2DModalImg" style="width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto"
-				src="images-misc/Tarot Hanged Man Bat.png">
+			<img id="2DModalImg" style="width:85%; height:85%; padding-top: 2%; object-fit: contain; margin: auto" src="">
 			<div style="text-align:center; font-size:20px; padding-top:1%;">
 				<b id="2DModalTitle" style="font-size:2vw;"></b>
 				<br>
@@ -682,23 +686,79 @@
 		<div class="columnside">
 			<p></p>
 		</div>
+		<!-- Sci-Fi City -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+			<img src="images-misc/City.png"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Sci-Fi City`, `A pixel art cityscape using a retro color palette.`, true);'>
+		</div>
+		<!-- Black Hole -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+			<img src="images-misc/Black Hole.png"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Black Hole Artistic Depiction`, `Pixel art representing an artistic rendering of the "event horizon" of a black hole.`, true);'>
+		</div>
+		<!-- LoKnight -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+			<img src="images-misc/LoKnight.png"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `LoKnight`, `An insectoid knight using a retro color palette.`, true);'>
+		</div>
+
+		<div class="columnside">
+			<p></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="columnside">
+			<p></p>
+		</div>
+		<!-- Atari VC Style Sci-Fi - Dude -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+			<img src="images-misc/Sprite1.png"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Sci-Fi Atari VC Protagonist`, `An Atari-styled sprite.`, true);'>
+		</div>
+		<!-- Atari VC Style Sci-Fi - Alien -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+			<img src="images-misc/Sprite2.png"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Sci-Fi Atari VC Alien`, `A small Atari-styled alien creature.`, true);'>
+		</div>
+		<!-- Atari VC Style Sci-Fi - Floating Thing? -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+			<img src="images-misc/Sprite3.png"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Sci-Fi Atari VC Floating Device`, `An Atari-styled sprite.`, true);'>
+		</div>
+
+		<div class="columnside">
+			<p></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="columnside">
+			<p></p>
+		</div>
 		<!-- Black and White Walking -->
 		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
 			<img src="images-misc/Walking Figure.png"
 				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `Shadow of a Man`, `A man walks away, his shadow reflects his legacy.`);'>
+				onclick='Open2DModal(this.src, `Shadow of a Man`, `A man walks away, his shadow reflects his legacy.`, false);'>
 		</div>
 		<!-- Tarot Card -->
 		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
 			<img src="images-misc/Tarot Hanged Man Bat.png"
 				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `Tarot Card: The Hanged Man`, `Originally made for the College of the Canyons Art Club, this piece went on display in the COC art hall.`);'>
+				onclick='Open2DModal(this.src, `Tarot Card: The Hanged Man`, `Originally made for the College of the Canyons Art Club, this piece went on display in the COC art hall.`, false);'>
 		</div>
 		<!-- Tree Landscape 2D Art -->
 		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
 			<img src="images-misc/DS4 Sprite-BlackOutline.png"
 				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `Controller Outline`, `Layout art done for an FPS Controls Menu.`);'>
+				onclick='Open2DModal(this.src, `Controller Outline`, `Layout art done for an FPS Controls Menu.`, false);'>
 		</div>
 
 		<div class="columnside">
@@ -733,27 +793,26 @@
 	</div>
 
 	<div class="row">
-		<!--Animations - Row 1-->
 		<div class="columnside">
 			<p></p>
 		</div>
-		<!-- Moon Guy Walk Cycle -->
+		<!-- Necroshroomer Attack -->
 		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
-			<img src="images-misc/MoonWalk-NoBg-Cropped.gif"
-				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `Moon Character Walk Cycle`, `Walk cycle animation for a Moon character.`);'>
+			<img src="images-misc/NecroshroomerAttack.gif"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Necroshroomer Attack`, `An attack animation for a high fantasy inspired monster`, true);'>
 		</div>
-		<!-- Yeti Guy Walk Cycle -->
+		<!-- Necroshroomer Attack Loop-->
 		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
-			<img src="images-misc/YetiWalkCycle.gif"
-				style="padding-top:0px; height:37.3vh; width:18.2vw;; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `Yeti Character Walk Cycle`, `Walk cycle animation for a Small Yeti character.`);'>
+			<img src="images-misc/NecroshroomerAttackLoop.gif"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw;; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Necroshroomer Attack (Hold)`, `An attack animation for a high fantasy inspired monster`, true);'>
 		</div>
-		<!-- Credits Animation -->
+		<!-- Necroshroomer Full -->
 		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
-			<img src="images-misc/credits---Gerardo.gif"
-				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-				onclick='Open2DModal(this.src, `Name Bubble Pop`, `Bubbly name animation made for a class project.`);'>
+			<img src="images-misc/NecroshroomerFull.gif"
+				style="image-rendering: pixelated; padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Necroshroomer Full Animation`, `An attack animation for a high fantasy inspired monster`, true);'>
 		</div>
 
 		<div class="columnside">
@@ -762,7 +821,34 @@
 	</div>
 
 	<div class="row">
-		<!--Animations - Row 2-->
+		<div class="columnside">
+			<p></p>
+		</div>
+		<!-- Moon Guy Walk Cycle -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%;">
+			<img src="images-misc/MoonWalk-NoBg-Cropped.gif"
+				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Moon Character Walk Cycle`, `Walk cycle animation for a Moon character.`, false);'>
+		</div>
+		<!-- Yeti Guy Walk Cycle -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-right:2%; padding-left:2%;">
+			<img src="images-misc/YetiWalkCycle.gif"
+				style="padding-top:0px; height:37.3vh; width:18.2vw;; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Yeti Character Walk Cycle`, `Walk cycle animation for a Small Yeti character.`, false);'>
+		</div>
+		<!-- Credits Animation -->
+		<div class="columnmiscbox" style="object-fit:contain; padding-left:2%;">
+			<img src="images-misc/credits---Gerardo.gif"
+				style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
+				onclick='Open2DModal(this.src, `Name Bubble Pop`, `Bubbly name animation made for a class project.`, false);'>
+		</div>
+
+		<div class="columnside">
+			<p></p>
+		</div>
+	</div>
+
+	<div class="row">
 		<div class="columnside">
 			<p></p>
 		</div>
@@ -771,7 +857,7 @@
 			<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
 				<img src="images-misc/HomerEatsThumbnail.png"
 					style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-					onclick='OpenAnimModal(`https://www.youtube.com/embed/TXwuVMgkXfA`, `Homer Eats a Donut`, `Premade Homer model, animated and shaded by me.`);'>
+					onclick='OpenAnimModal(`https:\\www.youtube.com/embed/TXwuVMgkXfA`, `Homer Eats a Donut`, `Premade Homer model, animated and shaded by me.`, false);'>
 			</div>
 		</div>
 		<!--Lemonade Stand Animation -->
@@ -779,7 +865,7 @@
 			<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
 				<img src="images-misc/LemonadeThumbnail.png"
 					style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-					onclick='OpenAnimModal(`https://www.youtube.com/embed/jDCL_N2AnPo`, `Fish Stand`, `Scene depicting a gluttonous penguin.`);'>
+					onclick='OpenAnimModal(`https:\\www.youtube.com/embed/jDCL_N2AnPo`, `Fish Stand`, `Scene depicting a gluttonous penguin.`, false);'>
 			</div>
 		</div>
 		<!--Cancer Cells Multiplication Animation -->
@@ -787,7 +873,7 @@
 			<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
 				<img src="images-misc/CellsThumbnail.png"
 					style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-					onclick='OpenAnimModal(`https://www.youtube.com/embed/Uvb5b3NXvNI`, `Cell Creature Mitosis`, `POV scene of a cell-like creature multiplying.`);'>
+					onclick='OpenAnimModal(`https:\\www.youtube.com/embed/Uvb5b3NXvNI`, `Cell Creature Mitosis`, `POV scene of a cell-like creature multiplying.`, false);'>
 			</div>
 		</div>
 
@@ -797,7 +883,6 @@
 	</div>
 
 	<div class="row">
-		<!--Animations - Row 3-->
 		<div class="columnside">
 			<p></p>
 		</div>
@@ -806,7 +891,7 @@
 			<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
 				<img src="images-misc/R3BackgroundThumbnail.png"
 					style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-					onclick='OpenAnimModal(`https://www.youtube.com/embed/uf5uHEmRUq4`, `Rewound Running Remix Background`, `Made using Photoshop & Unity from a combination of moving images and models.`);'>
+					onclick='OpenAnimModal(`https:\\www.youtube.com/embed/uf5uHEmRUq4`, `Rewound Running Remix Background`, `Made using Photoshop & Unity from a combination of moving images and models.`, false);'>
 			</div>
 		</div>
 		<!--Castaways Animation -->
@@ -814,7 +899,7 @@
 			<div style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;">
 				<img src="images-misc/CastawaysThumbnail.png"
 					style="padding-top:0px; height:37.3vh; width:18.2vw; object-fit:cover;" class="hover-shadow cursor"
-					onclick='OpenAnimModal(`https://www.youtube.com/embed/vnoqS77XI58`, `Castaways Short - Scene 7`, `Using premade assets, my scene from a class project about 2 people stuck on an island. Scene 7 centers around one of the characters&#39; attempts to get a fire lit, despite having no survival training whatsoever.`);'>
+					onclick='OpenAnimModal(`https:\\www.youtube.com/embed/vnoqS77XI58`, `Castaways Short - Scene 7`, `Using premade assets, my scene from a class project about 2 people stuck on an island. Scene 7 centers around one of the characters&#39; attempts to get a fire lit, despite having no survival training whatsoever.`, false);'>
 			</div>
 		</div>
 

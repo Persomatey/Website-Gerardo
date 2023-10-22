@@ -7,7 +7,7 @@ html
 
 p, li 
 {
-  font-family: "Times New Roman", Times, serif
+  /* font-family: "Times New Roman", Times, serif; */
   font-size: 5vw;
   line-height: 2;
   letter-spacing: 1px;
