@@ -48,7 +48,7 @@ h2
   text-align: left;
   padding-right: 10px;
   padding-left: 0px;
-  color: dimgrey;
+  color: black;
   position: relative;
   margin-top: 0;
   margin-bottom: 0px;
@@ -102,7 +102,7 @@ p
 {
   padding-left: 15px;
   padding-right: 0px;
-  color: grey; 
+  color: #D5D9DE; 
 }
 
 img 
@@ -140,7 +140,7 @@ hr
   background-color: whitesmoke;
   padding-right: 10px; /**/
   margin: auto;
-  border: 1px solid #888; 
+  border: 1px solid #00000050; 
   width: 75%;
   height: 90%;
 }
@@ -198,7 +198,7 @@ hr
 .prev:focus, 
 .next:focus
 {
-  color: #999;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
@@ -234,7 +234,7 @@ hr
 
 .hover-shadow:hover 
 {
-  box-shadow: 5px 10px 18px #888888;
+  box-shadow: 5px 10px 18px #00000081;
 }
 
 .scrollDiv
@@ -382,12 +382,12 @@ body
 
 .hunterlink
 {
-  color: slategrey;
+  color: #D5D9DE;
 }
 
 .hunterlink:hover
 {
-  color: slateblue;
+  color: #39536D;
 }
 
 /* Email Copy */
@@ -474,7 +474,7 @@ C
 D
 {
 	text-decoration: none;
-	color: dimgrey; 
+	color: black; 
 	padding-right: 0px;
 	padding-left: 20px;
 }
@@ -524,7 +524,7 @@ F
 	margin: 4px 2px;
 	cursor: pointer;
 
-	background-color: grey; 
+	background-color: dimgray; 
 	border-radius: 3px;
 }
 .buttonTaBYeSel 
@@ -553,7 +553,7 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: grey; 
+	background-color: dimgray; 
 	border-radius: 3px;
 }
 .buttonR3YeSel 
@@ -581,7 +581,7 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: grey; 
+	background-color: dimgray; 
 	border-radius: 3px;
 }
 .buttonLoFYeSel 
@@ -609,7 +609,7 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: grey; 
+	background-color: dimgray; 
 	border-radius: 3px;
 }
 .buttonSSYeSel 
